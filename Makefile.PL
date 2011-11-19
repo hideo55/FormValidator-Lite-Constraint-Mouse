@@ -2,7 +2,8 @@ use inc::Module::Install;
 name 'FormValidator-Lite-Constraint-Mouse';
 all_from 'lib/FormValidator/Lite/Constraint/Mouse.pm';
 
-# requires '';
+requires 'FormValidator::LIte';
+requires 'Mouse';
 
 tests 't/*.t';
 author_tests 'xt';

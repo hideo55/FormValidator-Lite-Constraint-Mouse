@@ -1,7 +1,19 @@
 package FormValidator::Lite::Constraint::Mouse;
 use strict;
 use warnings;
+use FormValidator::Lite::Constraint;
+use Mouse::Util::TypeConstraints qw(find_type_constraint);
+
 our $VERSION = '0.01';
+
+*_get_constraint = \&Mouse::Util::TypeConstraints::find_or_create_isa_type_constraint;
+
+my @builtins = Mouse::Util::TypeConstraints::list_all_builtin_type_constraints();
+for my $name ( @builtins ){ 
+    rule $name => sub{
+        _get_constraint($name)->check($_);
+    };
+}
 
 1;
 __END__
