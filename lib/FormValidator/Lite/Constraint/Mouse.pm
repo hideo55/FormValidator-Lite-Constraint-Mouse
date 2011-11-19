@@ -6,10 +6,10 @@ use Mouse::Util::TypeConstraints ();
 
 our $VERSION = '0.01';
 
-*_get_constraint = \&Mouse::Util::TypeConstraints::find_or_create_isa_type_constraint;
+*_get_constraint = \&Mouse::Util::TypeConstraints::find_type_constraint;
 
-my @builtins = Mouse::Util::TypeConstraints::list_all_builtin_type_constraints();
-for my $name ( @builtins ){ 
+my @types = Mouse::Util::TypeConstraints::list_all_type_constraints();
+for my $name ( @types ){ 
     rule $name => sub{
         _get_constraint($name)->check($_);
     };
@@ -20,17 +20,16 @@ __END__
 
 =head1 NAME
 
-FormValidator::Lite::Constraint::Mouse -
+FormValidator::Lite::Constraint::Mouse - Use Mouse's type constraints.
 
 =head1 SYNOPSIS
 
   use FormValidator::Lite;
   FormValidator::Lite->load_constraints(qw/Mouse/);
   
-
 =head1 DESCRIPTION
 
-FormValidator::Lite::Constraint::Mouse is
+This module is custom constraint module for FormValidator::Lite.
 
 =head1 AUTHOR
 
