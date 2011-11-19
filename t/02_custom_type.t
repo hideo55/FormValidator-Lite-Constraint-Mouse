@@ -1,5 +1,4 @@
 use Test::More;
-use Test::Fatal;
 use Mouse::Util::TypeConstraints;
 use FormValidator::Lite;
 
