@@ -2,7 +2,7 @@ package FormValidator::Lite::Constraint::Mouse;
 use strict;
 use warnings;
 use FormValidator::Lite::Constraint;
-use Mouse::Util::TypeConstraints qw(find_type_constraint);
+use Mouse::Util::TypeConstraints ();
 
 our $VERSION = '0.01';
 
@@ -24,7 +24,9 @@ FormValidator::Lite::Constraint::Mouse -
 
 =head1 SYNOPSIS
 
-  use FormValidator::Lite::Constraint::Mouse;
+  use FormValidator::Lite;
+  FormValidator::Lite->load_constraints(qw/Mouse/);
+  
 
 =head1 DESCRIPTION
 
