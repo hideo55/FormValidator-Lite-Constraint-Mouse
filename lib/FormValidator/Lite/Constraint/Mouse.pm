@@ -48,7 +48,7 @@ FormValidator::Lite::Constraint::Mouse - Use Mouse's type constraints.
 
 =head1 DESCRIPTION
 
-This module is custom constraint module for FormValidator::Lite.
+This module provides Mouse's type constraint as constraint rule of L<FormValidator::Lite>
 If you wanna know the constraint, see L<Mouse::Util::TypeConstraints> for details.
 
 =head1 AUTHOR
