@@ -26,16 +26,38 @@ FormValidator::Lite::Constraint::Mouse - Use Mouse's type constraints.
 
   use FormValidator::Lite;
   FormValidator::Lite->load_constraints(qw/Mouse/);
-  
+
+  my $validator = FormValidator::Lite->new(CGI->new("flg=1"));
+  $validator->check(
+     flg => ['Bool']
+ );
+
+  #if you wanna use your original constraints.
+  use FormValidator::Lite;
+  use Mouse::Util::TypeConstraints;
+
+  enum 'HttpMethod' => qw(GET HEAD POST PUT DELETE); #you must load before load 'FormValidator::Lite->load_constraints(qw/Mouse/)'
+
+  FormValidator::Lite->load_constraints(qw/Mouse/);
+
+  my $validator = FormValidator::Lite->new(CGI->new("req_type=GET"));
+  $validator->check(
+     "req_type => ['HttpMethod']
+ );
+
+
 =head1 DESCRIPTION
 
 This module is custom constraint module for FormValidator::Lite.
+If you wanna know the constraint, see L<Mouse::Util::TypeConstraints> for details.
 
 =head1 AUTHOR
 
 Hideaki Ohno E<lt>hide.o.j55 {at} gmail.comE<gt>
 
 =head1 SEE ALSO
+
+L<FormValidator::Lite>,L<Mouse::Util::TypeConstraints>
 
 =head1 LICENSE
 
