@@ -10,8 +10,9 @@ our $VERSION = '0.01';
 
 my @types = Mouse::Util::TypeConstraints::list_all_type_constraints();
 for my $name ( @types ){ 
+    my $constraint = _get_constraint($name);
     rule $name => sub{
-        _get_constraint($name)->check($_);
+        $constraint->check($_);
     };
 }
 
