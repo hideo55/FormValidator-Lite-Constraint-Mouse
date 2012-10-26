@@ -1,27 +1,40 @@
-This is Perl module FormValidator::Lite::Constraint::Mouse.
+NAME
+    FormValidator::Lite::Constraint::Mouse - Use Mouse's type constraints.
 
-INSTALLATION
+SYNOPSIS
+      use FormValidator::Lite;
+      FormValidator::Lite->load_constraints(qw/Mouse/);
 
-FormValidator::Lite::Constraint::Mouse installation is straightforward. If your CPAN shell is set up,
-you should just be able to do
+      my $validator = FormValidator::Lite->new(CGI->new("flg=1"));
+      $validator->check(
+         flg => ['Bool']
+     );
 
-    % cpan FormValidator::Lite::Constraint::Mouse
+      #if you wanna use your original constraints.
+      use FormValidator::Lite;
+      use Mouse::Util::TypeConstraints;
 
-Download it, unpack it, then build it as per the usual:
+      enum 'HttpMethod' => qw(GET HEAD POST PUT DELETE); #you must load before load 'FormValidator::Lite->load_constraints(qw/Mouse/)'
 
-    % perl Makefile.PL
-    % make && make test
+      FormValidator::Lite->load_constraints(qw/Mouse/);
 
-Then install it:
+      my $validator = FormValidator::Lite->new(CGI->new("req_type=GET"));
+      $validator->check(
+         "req_type => ['HttpMethod']
+     );
 
-    % make install
+DESCRIPTION
+    This module provides Mouse's type constraint as constraint rule of
+    FormValidator::Lite If you wanna know the constraint, see
+    Mouse::Util::TypeConstraints for details.
 
-DOCUMENTATION
+AUTHOR
+    Hideaki Ohno <hide.o.j55 {at} gmail.com>
 
-FormValidator::Lite::Constraint::Mouse documentation is available as in POD. So you can do:
+SEE ALSO
+    FormValidator::Lite,Mouse::Util::TypeConstraints
 
-    % perldoc FormValidator::Lite::Constraint::Mouse
+LICENSE
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
 
-to read the documentation online with your favorite pager.
-
-Hideaki Ohno

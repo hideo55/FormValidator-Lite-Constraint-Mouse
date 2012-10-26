@@ -19,4 +19,13 @@
 ^\.shipit$
 ^\.git/
 \.sw[po]$
+\.gitignore
+\.project
 \.travis\.yml$
+MYMETA\.
+^cover_db
+^.includepath
+^\_build
+^Build$
+^FormValidator-Lite-Constraint-Mouse-
+^MANIFEST\.
