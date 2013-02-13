@@ -6,13 +6,22 @@ use Mouse::Util::TypeConstraints ();
 
 our $VERSION = '0.01';
 
-*_get_constraint = \&Mouse::Util::TypeConstraints::find_type_constraint;
+my $get_constraint = \&Mouse::Util::TypeConstraints::find_type_constraint;
 
 my @types = Mouse::Util::TypeConstraints::list_all_type_constraints();
-for my $name ( @types ){ 
-    my $constraint = _get_constraint($name);
-    rule $name => sub{
-        $constraint->check($_);
+for my $name (@types) {
+    my $constraint = $get_constraint->($name);
+    rule $name => sub {
+        my $value = $_;
+
+        $constraint->check($value) or do {
+            return unless $constraint->has_coercion;
+
+            $value = $constraint->coerce($value);
+
+            return $constraint->check($value);
+        };
+
     };
 }
 
@@ -31,7 +40,7 @@ FormValidator::Lite::Constraint::Mouse - Use Mouse's type constraints.
   my $validator = FormValidator::Lite->new(CGI->new("flg=1"));
   $validator->check(
      flg => ['Bool']
- );
+  );
 
   #if you wanna use your original constraints.
   use FormValidator::Lite;
@@ -44,7 +53,7 @@ FormValidator::Lite::Constraint::Mouse - Use Mouse's type constraints.
   my $validator = FormValidator::Lite->new(CGI->new("req_type=GET"));
   $validator->check(
      "req_type => ['HttpMethod']
- );
+  );
 
 
 =head1 DESCRIPTION

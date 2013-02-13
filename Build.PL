@@ -15,16 +15,17 @@ Module::Build->new(
     },
     configure_requires => { 'Module::Build' => '0.38' },
     requires           => {
-        'perl'                => '5.008003',
-        'FormValidator::Lite' => 0,
-        'Mouse'               => '0.18',
+        'perl'                         => '5.008003',
+        'FormValidator::Lite'          => 0,
+        'Mouse'                        => '0.90',
+        'Mouse::Util::TypeConstraints' => 0,
     },
-    recommends => { 'Mouse'     => '0.92' },
-    no_index   => { 'directory' => [ 't', 'xt', 'inc', 'eg' ] },
+    no_index => { 'directory' => [ 't', 'xt', 'inc', 'eg' ] },
     test_files => ( -d '.git' || $ENV{RELEASE_TESTING} ) ? [qw(t/ xt/)] : ['t/'],
-    create_readme  => 1,
-    add_to_cleanup => ['FormValidator-Lite-Constraint-Mouse-*'],
-    meta_merge     => {
+    create_makefile_pl => 'small',
+    create_readme      => 1,
+    add_to_cleanup     => ['FormValidator-Lite-Constraint-Mouse-*'],
+    meta_merge         => {
         keywords  => [qw/Mouse FormValidator::Lite/],
         resources => {
             repository => 'git://github.com/hideo55/p5-FormValidator-Lite-Constraint-Mouse.git',
