@@ -4,7 +4,7 @@
       "Hideaki Ohno<hide.o.j55@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Module::Build version 0.38, CPAN::Meta::Converter version 2.112150",
+   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.112150",
    "keywords" : [
       "Mouse",
       "FormValidator::Lite"
@@ -38,14 +38,18 @@
          }
       },
       "runtime" : {
-         "recommends" : {
-            "Mouse" : "0.92"
-         },
          "requires" : {
             "FormValidator::Lite" : 0,
-            "Mouse" : "0.18",
+            "Mouse" : "0.90",
+            "Mouse::Util::TypeConstraints" : 0,
             "perl" : "5.008003"
          }
+      }
+   },
+   "provides" : {
+      "FormValidator::Lite::Constraint::Mouse" : {
+         "file" : "lib/FormValidator/Lite/Constraint/Mouse.pm",
+         "version" : "0.01"
       }
    },
    "release_status" : "stable",

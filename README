@@ -8,7 +8,7 @@ SYNOPSIS
       my $validator = FormValidator::Lite->new(CGI->new("flg=1"));
       $validator->check(
          flg => ['Bool']
-     );
+      );
 
       #if you wanna use your original constraints.
       use FormValidator::Lite;
@@ -21,7 +21,7 @@ SYNOPSIS
       my $validator = FormValidator::Lite->new(CGI->new("req_type=GET"));
       $validator->check(
          "req_type => ['HttpMethod']
-     );
+      );
 
 DESCRIPTION
     This module provides Mouse's type constraint as constraint rule of
