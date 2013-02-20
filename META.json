@@ -39,7 +39,7 @@
       },
       "runtime" : {
          "requires" : {
-            "FormValidator::Lite" : 0,
+            "FormValidator::Lite" : "0.10",
             "Mouse" : "0.90",
             "Mouse::Util::TypeConstraints" : 0,
             "perl" : "5.008003"
@@ -49,7 +49,7 @@
    "provides" : {
       "FormValidator::Lite::Constraint::Mouse" : {
          "file" : "lib/FormValidator/Lite/Constraint/Mouse.pm",
-         "version" : "0.01"
+         "version" : "0.02"
       }
    },
    "release_status" : "stable",
@@ -64,5 +64,5 @@
          "url" : "git://github.com/hideo55/p5-FormValidator-Lite-Constraint-Mouse.git"
       }
    },
-   "version" : "0.01"
+   "version" : "0.02"
 }

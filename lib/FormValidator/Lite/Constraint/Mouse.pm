@@ -4,7 +4,7 @@ use warnings;
 use FormValidator::Lite::Constraint;
 use Mouse::Util::TypeConstraints ();
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 my $get_constraint = \&Mouse::Util::TypeConstraints::find_type_constraint;
 
