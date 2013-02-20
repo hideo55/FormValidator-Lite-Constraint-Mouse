@@ -16,7 +16,7 @@ Module::Build->new(
     configure_requires => { 'Module::Build' => '0.38' },
     requires           => {
         'perl'                         => '5.008003',
-        'FormValidator::Lite'          => 0,
+        'FormValidator::Lite'          => '0.10',
         'Mouse'                        => '0.90',
         'Mouse::Util::TypeConstraints' => 0,
     },
