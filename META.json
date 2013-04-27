@@ -4,7 +4,7 @@
       "Hideaki Ohno<hide.o.j55@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.112150",
+   "generated_by" : "Module::Build version 0.4004, CPAN::Meta::Converter version 2.130880",
    "keywords" : [
       "Mouse",
       "FormValidator::Lite"
@@ -28,7 +28,7 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "Test::Fatal" : 0,
+            "Test::Fatal" : "0",
             "Test::More" : "0.98"
          }
       },
@@ -41,7 +41,7 @@
          "requires" : {
             "FormValidator::Lite" : "0.10",
             "Mouse" : "0.90",
-            "Mouse::Util::TypeConstraints" : 0,
+            "Mouse::Util::TypeConstraints" : "0",
             "perl" : "5.008003"
          }
       }
@@ -49,20 +49,20 @@
    "provides" : {
       "FormValidator::Lite::Constraint::Mouse" : {
          "file" : "lib/FormValidator/Lite/Constraint/Mouse.pm",
-         "version" : "0.02"
+         "version" : "0.03"
       }
    },
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/hideo55/p5-FormValidator-Lite-Constraint-Mouse/issues"
+         "web" : "https://github.com/hideo55/FormValidator-Lite-Constraint-Mouse/issues"
       },
       "license" : [
          "http://dev.perl.org/licenses/"
       ],
       "repository" : {
-         "url" : "git://github.com/hideo55/p5-FormValidator-Lite-Constraint-Mouse.git"
+         "url" : "git://github.com/hideo55/FormValidator-Lite-Constraint-Mouse.git"
       }
    },
-   "version" : "0.02"
+   "version" : "0.03"
 }
