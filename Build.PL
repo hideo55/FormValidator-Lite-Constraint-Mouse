@@ -1,5 +1,6 @@
 use strict;
 use warnings FATAL => 'all';
+use 5.008003;
 use Module::Build;
 
 Module::Build->new(
@@ -28,8 +29,8 @@ Module::Build->new(
     meta_merge         => {
         keywords  => [qw/Mouse FormValidator::Lite/],
         resources => {
-            repository => 'git://github.com/hideo55/p5-FormValidator-Lite-Constraint-Mouse.git',
-            bugtracker => 'https://github.com/hideo55/p5-FormValidator-Lite-Constraint-Mouse/issues',
+            repository => 'git://github.com/hideo55/FormValidator-Lite-Constraint-Mouse.git',
+            bugtracker => 'https://github.com/hideo55/FormValidator-Lite-Constraint-Mouse/issues',
         },
     },
 )->create_build_script;
