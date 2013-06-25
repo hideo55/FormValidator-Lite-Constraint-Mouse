@@ -12,6 +12,12 @@ MYMETA.json
 MYMETA.yml
 .includepath
 cover_db
-META.json
 _build
 Build
+/FormValidator-Lite-Constraint-Mouse-*
+/.build
+/_build_params
+/Build
+!Build/
+!META.json
+!LICENSE
