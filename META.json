@@ -58,16 +58,16 @@
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/hideo55/p5-FormValidator-Lite-Constraint-Mouse/issues"
+         "web" : "https://github.com/hideo55/FormValidator-Lite-Constraint-Mouse/issues"
       },
-      "homepage" : "https://github.com/hideo55/p5-FormValidator-Lite-Constraint-Mouse",
+      "homepage" : "https://github.com/hideo55/FormValidator-Lite-Constraint-Mouse",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/hideo55/p5-FormValidator-Lite-Constraint-Mouse.git",
-         "web" : "https://github.com/hideo55/p5-FormValidator-Lite-Constraint-Mouse"
+         "url" : "git://github.com/hideo55/FormValidator-Lite-Constraint-Mouse.git",
+         "web" : "https://github.com/hideo55/FormValidator-Lite-Constraint-Mouse"
       }
    },
-   "version" : "0.03",
+   "version" : "0.04",
    "x_contributors" : [
       "Hiroyuki Akabane <hirobanex@gmail.com>",
       "hideo55 <hide.o.j55@gmail.com>"
