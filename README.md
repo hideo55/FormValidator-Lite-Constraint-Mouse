@@ -25,12 +25,10 @@ FormValidator::Lite::Constraint::Mouse - Use Mouse's type constraints.
        "req_type => ['HttpMethod']
     );
 
-
-
 # DESCRIPTION
 
-This module provides Mouse's type constraint as constraint rule of [FormValidator::Lite](http://search.cpan.org/perldoc?FormValidator::Lite)
-If you want to know the constraint, see [Mouse::Util::TypeConstraints](http://search.cpan.org/perldoc?Mouse::Util::TypeConstraints) for details.
+This module provides Mouse's type constraint as constraint rule of [FormValidator::Lite](https://metacpan.org/pod/FormValidator::Lite)
+If you want to know the constraint, see [Mouse::Util::TypeConstraints](https://metacpan.org/pod/Mouse::Util::TypeConstraints) for details.
 
 # AUTHOR
 
@@ -38,7 +36,7 @@ Hideaki Ohno <hide.o.j55 {at} gmail.com>
 
 # SEE ALSO
 
-[FormValidator::Lite](http://search.cpan.org/perldoc?FormValidator::Lite),[Mouse::Util::TypeConstraints](http://search.cpan.org/perldoc?Mouse::Util::TypeConstraints)
+[FormValidator::Lite](https://metacpan.org/pod/FormValidator::Lite),[Mouse::Util::TypeConstraints](https://metacpan.org/pod/Mouse::Util::TypeConstraints)
 
 # LICENSE
 
